@@ -33,3 +33,9 @@ pytest 7.1.3`
 2. In the 'Get from Version Control' window, paste this url into the URL text box: https://github.com/JakeKonkowski/CS4900-Project-1.git
 3. Click Clone. The directory can be changed if desired.
 4. Trust the project when prompted.
+5. When the project opens, expand the 'External Libraries' folder in the project window to ensure the project is using Python 3.10. 
+   1. If your project is not using Python 3.10, open the 'File' tab.
+   2. Click settings.
+   3. Expand 'Project: CS4900-Project-1' and click the 'Python Interpreter' tab.
+   4. Select 'Python 3.10' from the 'Python Interpreter' drop-down.
+   5. Click 'Ok'.
