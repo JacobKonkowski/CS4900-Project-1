@@ -29,7 +29,7 @@ pytest 7.1.3`
 `pip show pytest-xdist`
 
 ### Project Setup
-1. On the 'Welcome to Python' window, click 'Get From VCS.'
+1. On the 'Welcome to Python' window in PyCharm, click 'Get From VCS.'
 2. In the 'Get from Version Control' window, paste this url into the URL text box: https://github.com/JakeKonkowski/CS4900-Project-1.git
 3. Click Clone. The directory can be changed if desired.
 4. Trust the project when prompted.
