@@ -1,29 +1,18 @@
-import pytest
+from main.classes.Line import Line
 
 
-class TestLine:
+def test_init():
+    line = Line((0, 1), (1, 0))
+    assert isinstance(line, Line)
 
-    def test_get_coords(self):
-        point = Point()
-        assert point.get_coords() == [0,1,2,3,4]
 
-    def test_set_coords(self):
-        point = Point([4,3,2,1,0])
-        point.set_coords([0,1,2,3,4])
+def test_getters():
+    line = Line((10, 3), (7, 2))
+    assert [line.get_cord1(), line.get_cord2()] == [(10, 3), (7, 2)]
 
-        assert point.get_coords() == [0,1,2,3,4]
 
-    def test_get_coords2(self):
-        point = Point()
-        assert point.get_coords() == [0,1,2,3,4]
-
-    def test_set_coords2(self):
-        point = Point([4,3,2,1,0])
-        point.set_coords([0,1,2,3,4])
-
-        assert point.get_coords() == [0,1,2,3,4]
-
-    def test_set_coords_type(self):
-        with pytest.raises(TypeError):
-            point = Point()
-            point.set_coords("Donkey")
+def test_setters():
+    line = Line((10, 3), (7, 2))
+    line.set_cord1((0, 1))
+    line.set_cord2((1, 0))
+    assert [line.get_cord1(), line.get_cord2()] == [(0, 1), (1, 0)]
