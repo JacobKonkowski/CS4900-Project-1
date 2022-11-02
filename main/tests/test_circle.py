@@ -5,7 +5,7 @@ class TestCircle:
 
     def test_get_coords(self):
         circle = Circle()
-        assert circle.get_cords() == [0, 1, 2, 3, 4]
+        assert circle.get_coords() == [0, 1, 2, 3, 4]
 
     def test_set_coords(self):
         circle = Circle([4, 3, 2, 1, 0])
