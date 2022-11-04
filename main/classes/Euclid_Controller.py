@@ -1,0 +1,2 @@
+class EuclidController:
+    pass
