@@ -1,34 +1,18 @@
-import pytest
+from main.classes.Circle import Circle
 
 
-class TestCircle:
+def test_init():
+    circle = Circle((0, 1), 5)
+    assert isinstance(circle, Circle)
 
-    def test_get_coords(self):
-        circle = Circle()
-        assert circle.get_coords() == [0, 1, 2, 3, 4]
 
-    def test_set_coords(self):
-        circle = Circle([4, 3, 2, 1, 0])
-        circle.set_coords([0, 1, 2, 3, 4])
+def test_getters():
+    circle = Circle((0, 1), 5)
+    assert [circle.get_cord(), circle.get_radius()] == [(0, 1), 5]
 
-        assert circle.get_coords() == [0, 1, 2, 3, 4]
 
-    def test_get_radius(self):
-        circle = Circle()
-        assert circle.get_radius() == 3
-
-    def test_set_radius(self):
-        circle = Circle(1)
-        circle.set_radius(3)
-
-        assert circle.get_radius() == 3
-
-    def test_set_coords_type(self):
-        with pytest.raises(TypeError):
-            circle = Circle()
-            circle.set_coords("Donkey")
-
-    def test_set_radius_type(self):
-        with pytest.raises(TypeError):
-            circle = Circle()
-            circle.set_radius("Donkey")
+def test_setters():
+    circle = Circle((0, 1), 5)
+    circle.set_cord((3, 2))
+    circle.set_radius(10)
+    assert [circle.get_cord(), circle.get_radius()] == [(3, 2), 10]
